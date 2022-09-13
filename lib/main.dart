@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'ui/products/products_overview_screen.dart';
-// import 'ui/products/products_manager.dart';
-// import 'ui/products/product_detail_screen.dart';
+import 'ui/products/products_overview_screen.dart';
+import 'ui/products/products_manager.dart';
+import 'ui/products/product_detail_screen.dart';
 import 'ui/products/user_products_screen.dart';
 
 void main() {
@@ -15,22 +15,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Myshop',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          fontFamily: 'Lato',
-          colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.blue,
-          ).copyWith(
-            secondary: Colors.deepOrange,
-          ),
+      title: 'Myshop',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Lato',
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue,
+        ).copyWith(
+          secondary: Colors.deepOrange,
         ),
-        // home: Container(
-        //   color: Colors.green,
-        // ));
-        home: const SafeArea(
-          child: UserProductsScreen(),
-        ));
+      ),
+      // home: Container(
+      //   color: Colors.green,
+      // ));
+      home: const SafeArea(
+        child: UserProductsScreen(),
+      ),
+    );
   }
 }
 

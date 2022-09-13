@@ -42,7 +42,7 @@ class UserProductsScreen extends StatelessWidget {
     return IconButton(
         onPressed: () {
           // ignore: avoid_print
-          print('Go to edit product screen');
+          print('Go to add product screen');
         },
         icon: const Icon(Icons.add));
   }

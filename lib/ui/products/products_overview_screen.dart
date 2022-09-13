@@ -56,7 +56,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
       ),
       itemBuilder: (ctx) => [
         const PopupMenuItem(
-          value: FilterOptions.all,
+          value: FilterOptions.favorites,
           child: Text('Only Favorites'),
         ),
         const PopupMenuItem(
