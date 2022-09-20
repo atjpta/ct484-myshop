@@ -21,7 +21,7 @@ class OrderItem {
 
   OrderItem copyWith({
     String? id,
-    double? amout,
+    double? amount,
     List<CartItem>? products,
     DateTime? dateTime,
   }) {
