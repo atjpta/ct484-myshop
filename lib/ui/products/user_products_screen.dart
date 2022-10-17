@@ -4,6 +4,8 @@ import 'user_product_list_tile.dart';
 import 'products_manager.dart';
 import '../shared/app_drawer.dart';
 
+import 'package:provider/provider.dart';
+
 class UserProductsScreen extends StatelessWidget {
   const UserProductsScreen({super.key});
   static const routeName = '/user-products';
@@ -28,17 +30,19 @@ class UserProductsScreen extends StatelessWidget {
   }
 
   Widget buildUserProductListView(ProductsManager productsManager) {
-    return ListView.builder(
-      itemCount: productsManager.itemCount,
-      itemBuilder: (ctx, i) => Column(
-        children: [
-          UserProductListTile(
-            productsManager.items[i],
-          ),
-          const Divider(),
-        ],
-      ),
-    );
+    return Consumer<ProductsManager>(builder: (ctx, productsManager, child) {
+      return ListView.builder(
+        itemCount: productsManager.itemCount,
+        itemBuilder: (ctx, i) => Column(
+          children: [
+            UserProductListTile(
+              productsManager.items[i],
+            ),
+            const Divider(),
+          ],
+        ),
+      );
+    });
   }
 
   Widget buildAddButton() {
